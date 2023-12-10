@@ -2,6 +2,14 @@
 
 ## Resource Management
 
+### Large file and folder monitor
+
+Use the CLI tool ncdu for a simple overview of the largest files and folders.
+
+```shell
+ncdu
+```
+
 ### Find large files
 
 Find files in current directory with a specified minimum size (in this example 100 MB)
