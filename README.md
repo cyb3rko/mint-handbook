@@ -1,5 +1,21 @@
 # Mint Handbook
 
+- [Resource Management](#resource-management)
+  - [Large file and folder monitor](#large-file-and-folder-monitor)
+  - [Find large files](#find-large-files)
+  - [journalctl](#journalctl)
+- [Packages](#packages)
+  - [Cleanup after hou(sekeeping](#cleanup-after-housekeeping)
+  - [Remove Bluetooth](#remove-bluetooth)
+  - [Remove screen reader + TTS](#remove-screen-reader--tts)
+  - [Remove asian fonts (>100 MB)](#remove-asian-fonts-100-mb)
+  - [Remove useless fonts](#remove-useless-fonts)
+  - [Remove Libreoffice](#remove-libreoffice)
+- [SSL Inspection](#ssl-inspection)
+  - [Add root CA to java](#add-root-ca-to-java)
+
+---
+
 ## Resource Management
 
 ### Large file and folder monitor
@@ -70,4 +86,15 @@ sudo apt-get purge fonts-beng-extra fonts-beng fonts-deva-extra fonts-deva fonts
 
 ```shell
 sudo apt-get purge libreoffice* liblibreoffice-java && sudo rm -r /etc/libreoffice/registry/res
+```
+
+## SSL Inspection
+
+### Add root CA to java
+
+Navigate to `*/jbr` or `*/jre` and then `lib/security`.  
+Then type the following:
+
+```shell
+keytool -import -alias aldi -keystore cacerts -file ~/Dokumente/AlDiRootCA.crt
 ```
