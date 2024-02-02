@@ -11,6 +11,7 @@
   - [Remove asian fonts (>100 MB)](#remove-asian-fonts-100-mb)
   - [Remove useless fonts](#remove-useless-fonts)
   - [Remove Libreoffice](#remove-libreoffice)
+  - [Remove all pip packages](#remove-all-pip-packages)
 - [SSL Inspection](#ssl-inspection)
   - [Add root CA to java](#add-root-ca-to-java)
 
@@ -86,6 +87,16 @@ sudo apt-get purge fonts-beng-extra fonts-beng fonts-deva-extra fonts-deva fonts
 
 ```shell
 sudo apt-get purge libreoffice* liblibreoffice-java && sudo rm -r /etc/libreoffice/registry/res
+```
+
+### Remove all pip packages
+
+```shell
+pip freeze > requirements.txt
+```
+
+```shell
+pip uninstall -r requirements.txt
 ```
 
 ## SSL Inspection
