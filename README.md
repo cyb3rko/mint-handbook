@@ -3,6 +3,7 @@
 - [Resource Management](#resource-management)
   - [Large file and folder monitor](#large-file-and-folder-monitor)
   - [Find large files](#find-large-files)
+  - [AutoTrash](#autotrash)
   - [journalctl](#journalctl)
 - [Packages](#packages)
   - [Cleanup after hou(sekeeping](#cleanup-after-housekeeping)
@@ -33,6 +34,18 @@ Find files in current directory with a specified minimum size (in this example 1
 
 ```shell
 find . -type f -size +100M
+```
+
+### Autotrash
+
+To automatically clear older files in the trash, run the following (example: files older than 40 days):
+
+```shell
+pip install autotrash
+```
+
+```shell
+autotrash -d 40 --install
 ```
 
 ### journalctl

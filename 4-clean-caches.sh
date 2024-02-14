@@ -38,6 +38,11 @@ echo "Cleaning flatpak cache"
 sudo find /var/tmp -type d -name 'flatpak-cache-*' -exec rm -rv "{}" +
 echo "Cleaning Toolbox downloads"
 sudo rm -rf /home/niko/.cache/JetBrains/Toolbox/download
+echo "Cleaning Steam caches"
+sudo rm -rf /home/niko/.steam/debian-installation/appcache/librarycache
+sudo rm -rf /home/niko/.steam/debian-installation/appcache/httpcache
+sudo rm -rf /home/niko/.steam/debian-installation/config/htmlcache
+sudo rm -rf /home/niko/.steam/debian-installation/steamapps/shadercache
 echo "===== Updated disk space ====="
 df -BM | grep "/dev/sdb1"
 echo "===== Finished ====="
