@@ -6,7 +6,7 @@
   - [AutoTrash](#autotrash)
   - [journalctl](#journalctl)
 - [Packages](#packages)
-  - [Cleanup after hou(sekeeping](#cleanup-after-housekeeping)
+  - [Cleanup after housekeeping](#cleanup-after-housekeeping)
   - [Remove Bluetooth](#remove-bluetooth)
   - [Remove screen reader + TTS](#remove-screen-reader--tts)
   - [Remove asian fonts (>100 MB)](#remove-asian-fonts-100-mb)
@@ -99,7 +99,11 @@ sudo apt-get purge fonts-beng-extra fonts-beng fonts-deva-extra fonts-deva fonts
 ### Remove Libreoffice
 
 ```shell
-sudo apt-get purge libreoffice* liblibreoffice-java && sudo rm -r /etc/libreoffice/registry/res
+sudo apt-get purge libreoffice* liblibreoffice-java \
+sudo rm -r /etc/libreoffice /usr/lib/libreoffice /usr/share/maven-repo/org/libreoffice \
+sudo find /usr/share/icons -name *libreoffice*.svg -exec rm {} + \
+sudo find /usr/share/icons -name *libreoffice*.png -exec rm {} + \
+sudo find /usr/share/app-install/desktop -name *libreoffice*.desktop -exec rm {} +
 ```
 
 ### Remove all pip packages
