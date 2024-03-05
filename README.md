@@ -15,6 +15,8 @@
   - [Remove all pip packages](#remove-all-pip-packages)
 - [SSL Inspection](#ssl-inspection)
   - [Add root CA to java](#add-root-ca-to-java)
+- [Other Tools](#other-tools)
+  - [Exiftool](#exiftool)
 
 ---
 
@@ -125,4 +127,16 @@ Then type the following:
 
 ```shell
 keytool -import -alias aldi -keystore cacerts -file ~/Dokumente/AlDiRootCA.crt
+```
+
+## Other Tools
+
+### Exiftool
+
+```shell
+sudo apt-get install libimage-exiftool-perl
+```
+
+```shell
+exiftool -all= file.png
 ```
