@@ -16,7 +16,7 @@
 - [SSL Inspection](#ssl-inspection)
   - [Add root CA to java](#add-root-ca-to-java)
 - [Other Tools](#other-tools)
-  - [JAVA_HOME](#java-home)
+  - [JAVA_HOME](#java_home)
   - [Exiftool](#exiftool)
 
 ---
