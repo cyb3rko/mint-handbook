@@ -16,6 +16,7 @@
 - [SSL Inspection](#ssl-inspection)
   - [Add root CA to java](#add-root-ca-to-java)
 - [Other Tools](#other-tools)
+  - [JAVA_HOME](#java-home)
   - [Exiftool](#exiftool)
 
 ---
@@ -130,6 +131,15 @@ keytool -import -alias aldi -keystore cacerts -file ~/Dokumente/AlDiRootCA.crt
 ```
 
 ## Other Tools
+
+### JAVA_HOME
+
+To set the JAVA_HOME variable, edit the `.profile` file in your home dir and add the following:
+
+```shell
+export JAVA_HOME="the path to the parent of your java bin path"
+export PATH=$JAVA_HOME/bin:$PATH
+```
 
 ### Exiftool
 
