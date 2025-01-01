@@ -1,3 +1,5 @@
+⚠️ Switched to [KDE neon](https://github.com/cyb3rko/kden-handbook)
+
 # Mint Handbook
 
 - [Resource Management](#resource-management)
